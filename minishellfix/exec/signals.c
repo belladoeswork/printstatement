@@ -6,7 +6,7 @@
 /*   By: tbella-n <tbella-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:17:02 by tbella-n          #+#    #+#             */
-/*   Updated: 2024/04/12 08:35:33 by tbella-n         ###   ########.fr       */
+/*   Updated: 2024/04/14 16:33:42 by tbella-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	sighandler_child(int numsig)
 // {
 // 	// g_global.error_num = 130;
 // 	// printf("\nCtrl+C pressed. Exiting heredoc.\n");
-	
+
 // 	(void)numsig;
 // 	// exit(EXIT_SUCCESS);
 // 	g_global.error_num = 130;
@@ -42,7 +42,7 @@ void	sighandler_child(int numsig)
 // }
 
 // void	ft_signal_ctrl_d(int numsig)
-// {	
+// {
 // 	(void)numsig;
 // 	g_global.error_num = 130;
 // 	exit(SIGINT);

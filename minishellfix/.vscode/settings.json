@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "lumumbash.h": "c",
+        "ctype.h": "c"
+    }
+}

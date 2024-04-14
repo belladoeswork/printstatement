@@ -6,7 +6,7 @@
 /*   By: tbella-n <tbella-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 10:26:12 by aguede            #+#    #+#             */
-/*   Updated: 2024/04/12 11:48:47 by tbella-n         ###   ########.fr       */
+/*   Updated: 2024/04/14 20:36:54 by tbella-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,14 +113,13 @@ char	*expand_tilde(char *str, char **p1, char **p2)
 	int		expanded_len;
 	char	*str_expanded;
 
-
-
-		str_tilde = ft_search(p1, p2, "HOME");
-		if (!str_tilde)
-			return (str);
-		expanded_len = (ft_strlen(str_tilde) * count_tildes(str)) + ft_strlen(str) - count_tildes(str) + 1;
-		str_expanded = ft_calloc(expanded_len, sizeof(char));
-		str_expanded = ft_replace(str, str_tilde, str_expanded);
+	str_tilde = ft_search(p1, p2, "HOME");
+	if (!str_tilde)
+		return (str);
+	expanded_len = (ft_strlen(str_tilde) * count_tildes(str)) + ft_strlen(str)
+		- count_tildes(str) + 1;
+	str_expanded = ft_calloc(expanded_len, sizeof(char));
+	str_expanded = ft_replace(str, str_tilde, str_expanded);
 	return (free(str_tilde), str_expanded);
 }
 

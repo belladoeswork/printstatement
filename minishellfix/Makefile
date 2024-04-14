@@ -27,6 +27,7 @@ EXEC		:=	exec/checks.c \
 				exec/exec_utils.c \
 				exec/exec.c \
 				exec/pipes_exec.c \
+				exec/heredoc.c \
 				exec/tree.c \
 				exec/signals.c \
 
@@ -76,7 +77,6 @@ TOKENIZER	:=	tokenizer/tokenizer.c \
 				tokenizer/tokens_list.c \
 				tokenizer/tokens_utils.c \
 				tokenizer/tokenizer_utils.c \
-				tokenizer/handlers_utils.c \
 				tokenizer/ft_handle.c
 
 SRCS		:=	$(BUILTINS)\

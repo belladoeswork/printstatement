@@ -6,7 +6,7 @@
 /*   By: tbella-n <tbella-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:40:32 by tbella-n          #+#    #+#             */
-/*   Updated: 2024/04/12 12:05:12 by tbella-n         ###   ########.fr       */
+/*   Updated: 2024/04/14 20:37:25 by tbella-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void				handle_quoted_argument(char *arg);
 void				handle_unquoted_argument(char *arg);
 char				**allocate_result_array(char *path_copy);
 void				split_path_into_parts(char *path_copy, char **result);
+void				ft_handle_single_argument(char *arg);
 // export_help.c
 void				skip_spaces(char *str, char **out, int last_space);
 char				*ft_no_space(char *str);
@@ -110,7 +111,8 @@ void				ft_signal_ctrl_d(int numsig);
 // tree.c
 void				ft_init_tree(t_node *node, t_minishell *minishell);
 bool				ft_is_delimiter(char *delimiter, char *str);
-void				ft_heredoc(t_redir_node *redir, int p[2], t_minishell *minishell);
+void				ft_heredoc(t_redir_node *redir, int p[2],
+						t_minishell *minishell);
 
 // pipes_exec.c
 int					ft_exec_child(char **split_args, char **environ);
@@ -157,5 +159,5 @@ char				*ft_find_command_path(const char *command, char **environ);
 char				*find_full_path(const char *command, char **directories);
 // void				ft_signal_ctrl_d(t_minishell *minishell);
 
-//void				set_signal(void);
+// void				set_signal(void);
 #endif

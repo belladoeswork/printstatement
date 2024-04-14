@@ -6,7 +6,7 @@
 /*   By: tbella-n <tbella-n@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:20:54 by aguede            #+#    #+#             */
-/*   Updated: 2024/04/12 13:35:07 by tbella-n         ###   ########.fr       */
+/*   Updated: 2024/04/14 16:32:43 by tbella-n         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static void	ft_init_minishell(t_minishell *minishell, char **env)
 static void	ft_start_execution(t_minishell *minishell)
 {
 	ft_init_tree(minishell->ast, minishell);
-	printf("we start exec node\n");
 	g_global.error_num = ft_exec_node(minishell->ast, false, minishell);
 	ft_clear_ast((&minishell->ast), minishell);
 }
